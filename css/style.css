@@ -13,7 +13,8 @@ html{
 
 header section{
     width: 100%;
-    height: 60vh;
+    min-width: 550px;
+    height: 55vh;
     position: relative;
 }
 
@@ -36,17 +37,19 @@ header section{
 
 #logo{
     width: 100px;
+    background-position: center;
 }
 
 nav{
     display: inline-block;
-    line-height: 50px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 nav ul li{
     list-style: none;
     display: inline-block;
-    padding: 10px;
+    padding-right: 25px;
 }
 
 nav a,ul li a{
@@ -54,7 +57,9 @@ nav a,ul li a{
     color: currentColor;
 }
 
-
+nav div{
+    line-height: 25px;
+}
 
 .container{
     width: 1024px;
@@ -62,15 +67,132 @@ nav a,ul li a{
 }
 
 .header-row{
+    min-width: 100%;
+}
+
+.col-center{
+    width: calc(100% - 200px);
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.header-row div h2{
+    font-size: 5vh;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 25px;
+}
+
+.header-row div p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-justify: center;
+    width: 600px;
+    line-height: 25px;
+}
+
+
+.button-header{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 10px;
+}
+
+.button-header a{
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+.section-row{
     width: 100%;
-    height: 75px;
-    padding-top: 15px;
+    position: relative;
+    padding: 10px;
+}
+
+
+.img-container{
+    width: 59%;
+    transform: scale(90%);
+}
+
+.text-container{
+    position: absolute;
+    width: 40%;
+    top: 50px;
+    right: 0;
+    padding-left: 130px;
+}
+
+.text-container h3{
+    width: 280px;
+    font-size: 4vh;
+    margin-right: 0;
+}
+
+.text-container p{
+    padding-top: 20px;
+    line-height: 20px;
+    width: 280px;
+    margin-right: 0;
+}
+
+main section{
+    min-height: 550px;
+}
+
+main section:nth-child(even){
+    background-color: rgb(245, 245, 245);
+}
+/* Buttons */
+
+.button-accedi{
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    padding: 8px 10px;
+    font-weight: 400;
+    color: black;
+    font-size: 14px;
 }
 
 .button-white{
     background-color: white;
     border-radius: 50px;
     text-align: center;
-    width:  100px;
+    padding: 12.5px 20px;
+    font-weight: 400;
+    color: black;
+}
 
+.button-black{
+    background-color: rgb(14, 14, 14);
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    padding: 12.5px 20px;
+    font-weight: 400;
+}
+
+/* ondina */
+
+.ondina::after{
+    content: url(../img/wave.svg);
+    display: block;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+    color: rosybrown;
 }
