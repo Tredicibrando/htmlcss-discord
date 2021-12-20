@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 html{
@@ -12,8 +13,12 @@ html{
 
 header section{
     width: 100%;
-    height: 500px;
+    height: 60vh;
     position: relative;
+}
+
+.f-left{
+    float: left;
 }
 
 .clearfix::after{
@@ -33,26 +38,39 @@ header section{
     width: 100px;
 }
 
+nav{
+    display: inline-block;
+    line-height: 50px;
+}
+
 nav ul li{
     list-style: none;
     display: inline-block;
     padding: 10px;
 }
 
-nav ul li a{
+nav a,ul li a{
     text-decoration: none;
     color: currentColor;
 }
 
-.f-left{
-    float: left;
-}
+
 
 .container{
     width: 1024px;
     margin: 0 auto;
 }
 
-.row{
+.header-row{
     width: 100%;
+    height: 75px;
+    padding-top: 15px;
+}
+
+.button-white{
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    width:  100px;
+
 }
