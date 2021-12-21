@@ -1,16 +1,19 @@
 /* RESET */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
-img{
+/* Layout rules */
+
+img {
     max-width: 100%;
 }
 
@@ -20,8 +23,138 @@ a{
     text-decoration: none;
 }
 
-.row::after{
+ul, ol {
+    list-style: none;
+}
+
+.row::after { 
     content: '';
     display: block;
     clear: both;
+}
+
+.row [class^="col"] {
+    float: left;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-8 {
+    width: calc( (100% / 12 ) * 8);
+}
+
+.col-4{
+    width: calc((100% / 12) * 4);
+}
+
+
+/* style rules */
+header{
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-menu li {
+    display: inline-block;
+    color: white;
+}
+
+.main-menu li a{
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.main-menu {
+    text-align: center;
+}
+
+.btn-wrapper{
+    text-align: center;
+}
+
+.btn-wrapper a {
+    background-color: #fff;
+    color: #23272A;
+    border-radius: 999px;
+    padding: 0 20px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.btn-wrapper, .logo-wrapper {
+    width: 125px;
+    padding: 0 5px;
+}
+
+.menu-wrapper {
+    width: calc(100% - 125px - 125px);
+}
+
+#jumbotron {
+    background-image: url(../img/jumbo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 15px;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+section {
+    padding: 15px 5px
+}
+
+#jumbotron h1 {  
+    font-size: calc(25px + 1vw);
+    margin: 0 0 25px;
+}
+
+#jumbotron p {
+    line-height: 1.5rem;
+    max-width: 650px;
+    margin: 15px auto 30px ;
+}
+
+.button {
+    border-radius: 999px;
+    padding: 5px 25px;
+    line-height: 30px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.button.button--white {
+    background-color: #fff;
+    color: #23272A;
+}
+
+.button.button--black {
+    background-color: #23272A;
+    color: white;
+}
+
+.button-wrapper a{
+    padding-left: 15px;
+}
+
+.text-wrapper h2{
+    font-size: calc(20px + 1vw);
+    padding-top: 30px;
+}
+
+.text-wrapper p{
+    padding-top: 10px;
+    line-height: 1.5rem;
 }
